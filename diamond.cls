@@ -21,9 +21,9 @@
 \RequirePackage{newpxmath}
 % language
 \RequirePackage[no-math]{fontspec}% no math font
-\setmainfont[Script=Khmer,Ligatures=TeX,AutoFakeBold=0,AutoFakeSlant=0.25]{KhmerOSPalatino}% roman font
+\setmainfont[Script=Khmer,Ligatures=TeX,AutoFakeBold=0,AutoFakeSlant=0.25]{Khmer OS}% roman font
 \setsansfont[Script=Khmer,Ligatures=TeX,AutoFakeBold=0,AutoFakeSlant=0.25]{Khmer OS Muol Light}% sans serif font
-\setmonofont[Script=Khmer,Ligatures=TeX,AutoFakeBold=0,AutoFakeSlant=0.25]{KhmerOSBokorPalatino}% typewriter font
+\setmonofont[Script=Khmer,Ligatures=TeX,AutoFakeBold=0,AutoFakeSlant=0.25]{Khmer OS Bokor}% typewriter font
 \XeTeXlinebreaklocale "km"% line break rule
 \XeTeXlinebreakskip = 0pt plus 1pt minus 0.5pt% line break skip
 % khmer number
@@ -397,44 +397,6 @@
 \setlist[itemize,2]{c}
 \setlist[itemize,3]{d}
 \setlist[itemize,4]{t}
-% sub enumerate
-\RequirePackage{tasks}
-\NewPatternFormat{k}{\@alpkh}% cntformats package
-\NewPatternFormat{m}{\@khmer}% counter-format=tsk[l]
-\settasks{%
-	counter-format=tsk[k].,%
-	label-format=\color{diamond}\ttfamily,%
-	label-offset=0.5ex,%
-	label-align=right,%
-	label-width=3ex,%
-	item-indent=3.5ex,%
-	column-sep=2ex,%
-	before-skip=0ex,%
-	after-skip=0ex,%
-	after-item-skip=0.5ex%
-}
-\NewTasks[%
-	style=enumerate,%
-	counter-format=tsk[k].,%
-	label-format=\color{diamond}\ttfamily,%
-	label-offset=0.5ex,%
-	label-align=right,%
-	label-width=3ex,%
-	item-indent=3.5ex,%
-	column-sep=2ex,%
-	before-skip=0ex,%
-	after-skip=0ex,%
-	after-item-skip=0.5ex]{Enumerate}[\item]
-\NewTasks[%
-	style=itemize,
-	label=\ensuremath{\bullet},
-	label-format=\color{diamond},%
-	label-offset=0.5ex,%
-	label-align=right,%
-	label-width=1ex,%
-	item-indent=1.5ex,%
-	column-sep=2ex,%
-	after-item-skip=0.5ex]{Itemize}[\item]
 % caption
 \RequirePackage{caption}
 \RequirePackage{subcaption}
@@ -602,7 +564,7 @@
 	arrow style/.style={->,draw=diamond},%
 	from style/.append style={draw=diamond}}
 \def\tkzTabDefaultLineWidth{1pt}
-\RequirePackage{tkz-euclide}
-\usetkzobj{all}
+%\RequirePackage{tkz-euclide}
+%\usetkzobj{all}
 %
 \endinput
